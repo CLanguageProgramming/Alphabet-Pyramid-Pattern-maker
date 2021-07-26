@@ -9,11 +9,8 @@ int main()
     char b;
     char e = 'z';
     scanf("%c", &b);
-    if(b >= e-(b-1))
-    {
-        printf("Invalid Alphabet.");
-    }
-    else
+    
+    if(b >= e)
     {
         for(int c=1;c<=a;c++)
         {
@@ -23,7 +20,13 @@ int main()
             }
             b++;
             printf("\n");
+            if(b > 'z')
+            {
+                printf("Cant print over 'z'");
+                break;
+            }
         }
+        getchar();
     }
     getchar();
 }
